@@ -1,0 +1,32 @@
+#!/bin/bash
+cd ~
+
+sudo yum install update -y
+
+#The next two are necessary for pip 
+#to run without failing with error 'Command "python 
+#setup.py egg_info" failed with error code 1':
+sudo yum groupinstall "Development Tools" -y
+sudo yum install python-devel libpng-devel freetype-devel -y
+
+#This isn't needed for sine_wave.py, but is still here
+#for reference:
+#This takes at least ten minutes:
+#sudo pip install matplotlib pandas #Finally it works!
+
+#This takes ten minutes.
+sudo pip install dataspyre
+
+#install and activate nginx
+# Reference: git clone https://github.com/craigwongva/install-reverse-proxy
+sudo yum -y install epel-release
+sudo yum -y install nginx httpd-tools
+
+#activate nginx to enable outside world to use app
+cd ~/python-cf-examples
+sudo cp sine_wave.conf /etc/nginx/conf.d
+sudo service nginx start
+
+#start the app
+python sine_wave.py
+
