@@ -1,0 +1,30 @@
+[ec2-user@ip-172-31-7-54 ~]$ sudo pip install dataspyre
+You are using pip version 6.1.1, however version 9.0.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+Collecting dataspyre
+  Downloading DataSpyre-0.2.6-py2-none-any.whl (126kB)
+    100% |████████████████████████████████| 126kB 2.3MB/s
+Collecting cherrypy (from dataspyre)
+  Downloading CherryPy-11.0.0-py2.py3-none-any.whl (435kB)
+    100% |████████████████████████████████| 438kB 1.0MB/s
+Requirement already satisfied (use --upgrade to upgrade): numpy in /usr/local/lib64/python2.7/site-packages (from dataspyre)
+Requirement already satisfied (use --upgrade to upgrade): pandas in /usr/local/lib64/python2.7/site-packages (from dataspyre)
+Requirement already satisfied (use --upgrade to upgrade): matplotlib in /usr/local/lib64/python2.7/site-packages (from dataspyre)
+Requirement already satisfied (use --upgrade to upgrade): jinja2 in /usr/lib/python2.7/dist-packages (from dataspyre)
+Collecting cheroot>=5.2.0 (from cherrypy->dataspyre)
+  Downloading cheroot-5.7.0-py2.py3-none-any.whl (63kB)
+    100% |████████████████████████████████| 65kB 4.6MB/s
+Collecting portend>=2.1.1 (from cherrypy->dataspyre)
+  Downloading portend-2.1.2-py2.py3-none-any.whl
+Requirement already satisfied (use --upgrade to upgrade): six in /usr/local/lib/python2.7/site-packages (from cherrypy->dataspyre)
+Requirement already satisfied (use --upgrade to upgrade): python-dateutil in /usr/lib/python2.7/dist-packages (from pandas->dataspyre)
+Requirement already satisfied (use --upgrade to upgrade): pytz>=2011k in /usr/local/lib/python2.7/site-packages (from pandas->dataspyre)
+Requirement already satisfied (use --upgrade to upgrade): functools32 in /usr/local/lib/python2.7/site-packages (from matplotlib->dataspyre)
+Requirement already satisfied (use --upgrade to upgrade): subprocess32 in /usr/local/lib64/python2.7/site-packages (from matplotlib->dataspyre)
+Requirement already satisfied (use --upgrade to upgrade): cycler>=0.10 in /usr/local/lib/python2.7/site-packages (from matplotlib->dataspyre)
+Requirement already satisfied (use --upgrade to upgrade): pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=1.5.6 in /usr/local/lib/python2.7/site-packages (from matplotlib->dataspyre)
+Requirement already satisfied (use --upgrade to upgrade): markupsafe in /usr/lib64/python2.7/dist-packages (from jinja2->dataspyre)
+Collecting tempora>=1.8 (from portend>=2.1.1->cherrypy->dataspyre)
+  Downloading tempora-1.8-py2.py3-none-any.whl
+Installing collected packages: cheroot, tempora, portend, cherrypy, dataspyre
+Successfully installed cheroot-5.7.0 cherrypy-11.0.0 dataspyre-0.2.6 portend-2.1.2 tempora-1.8
