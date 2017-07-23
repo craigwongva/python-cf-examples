@@ -37,4 +37,5 @@ port = int(os.getenv("PORT", 9099))
 
 app = SimpleSineApp()
 app.launch(port=port, host='0.0.0.0')
+#i think this causes pcf push to not start app properly: app.launch(port=port)
 
