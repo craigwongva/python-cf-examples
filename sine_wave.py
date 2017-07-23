@@ -36,6 +36,6 @@ class SimpleSineApp(server.App):
 port = int(os.getenv("PORT", 9099))
 
 app = SimpleSineApp()
+# cw: PCF will not deploy without the 'host='. 
 app.launch(port=port, host='0.0.0.0')
-#i think this causes pcf push to not start app properly: app.launch(port=port)
 
