@@ -1,4 +1,5 @@
 #!/bin/bash
+#Run time is 14 minutes.
 cd ~
 
 sudo yum install update -y
@@ -25,6 +26,7 @@ sudo yum -y install nginx httpd-tools
 #activate nginx to enable outside world to use app
 cd ~/python-cf-examples
 sudo cp sine_wave.conf /etc/nginx/conf.d
+sudo cp simple.conf /etc/nginx/conf.d
 sudo service nginx start
 
 #start the app
