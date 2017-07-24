@@ -6,3 +6,9 @@ applications:
   random-route: true
   command: python sine_wave.py
   buildpack: python_buildpack_v1_5_18
+- name: sinewave2
+  memory: 512MB
+  disk_quota: 2GB
+  random-route: true
+  command: python simple.py
+  buildpack: python_buildpack_v1_5_18
