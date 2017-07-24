@@ -30,5 +30,6 @@ sudo cp simple.conf /etc/nginx/conf.d
 sudo service nginx start
 
 #start the app
-python sine_wave.py
+python sine_wave.py &
+python simple.py &
 
